@@ -1,0 +1,19 @@
+{
+  "name": "mongo_tx",
+  "version": "1.0.0",
+  "description": "Test Mongo Transaction",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "MTX"
+  ],
+  "author": "Chai Mai",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.18"
+  }
+}
