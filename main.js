@@ -14,9 +14,10 @@ app.use('/', appRoutes); // Use routes.
 
 // Set up mongoose connection
 const mongoose = require('mongoose');
-let uri = 'mongodb://localhost:27017,localhost:27018,' + 'localhost:27019/mongo_tx';
+let uri = 'mongodb://mongo:27017/mongo_tx';
+// let uri = 'mongodb://localhost:27017,localhost:27018,' + 'localhost:27019/mongo_tx';
 mongoose.connect(uri, {
-  replicaSet: 'rs',
+  // replicaSet: 'rs',
   useNewUrlParser: true,
   useFindAndModify: false
 });

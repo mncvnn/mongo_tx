@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+  mongo_tx:
+    image: mongo_tx
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 1337:1337
+    volumes: 
+      - ./:/usr/src/app
+    depends_on:
+      mongo:
+        condition: service_healthy
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes: 
+      - /data/db
+    healthcheck:
+      test: "exit 0"
